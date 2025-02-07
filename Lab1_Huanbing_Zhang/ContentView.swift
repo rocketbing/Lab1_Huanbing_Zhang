@@ -43,6 +43,9 @@ struct ContentView: View {
             Text("Correct: \(correctAnswers)  |  Wrong: \(wrongAnswers)")
                 .padding()
         }
+        .onAppear {
+                    startNewRound()
+        }
     }
     func checkAnswer(isPrimeSelected: Bool) {
         if isPrimeSelected == isPrime {
