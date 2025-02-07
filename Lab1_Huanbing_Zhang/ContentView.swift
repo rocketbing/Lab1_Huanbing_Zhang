@@ -22,6 +22,17 @@ struct ContentView: View {
             Text("\(number)")
                 .font(.system(size: 60, weight: .bold, design: .default))
                 .padding()
+            Button(action: { checkAnswer(isPrimeSelected: true) }) {
+                           Text("Prime")
+                               .font(.title)
+                               .padding()
+            }
+                       
+            Button(action: { checkAnswer(isPrimeSelected: false) }) {
+                           Text("Not Prime")
+                               .font(.title)
+                               .padding()
+            }
         }
     }
     func checkAnswer(isPrimeSelected: Bool) {
