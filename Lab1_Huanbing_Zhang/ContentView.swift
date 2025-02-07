@@ -23,7 +23,18 @@ struct ContentView: View {
                 .font(.system(size: 60, weight: .bold, design: .default))
                 .padding()
         }
-       
+    }
+    func checkAnswer(isPrimeSelected: Bool) {
+        if isPrimeSelected == isPrime {
+            isCorrect = true
+            correctAnswers += 1
+        } else {
+            isCorrect = false
+            wrongAnswers += 1
+        }
+
+        showResult = true
+        attempts += 1
     }
 }
 
