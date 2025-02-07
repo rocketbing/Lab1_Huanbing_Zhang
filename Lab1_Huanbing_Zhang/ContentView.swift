@@ -70,6 +70,12 @@ struct ContentView: View {
            }
            return true
     }
+    func resetGame() {
+        correctAnswers = 0
+        wrongAnswers = 0
+        attempts = 0
+        startNewRound()
+    }
 }
 
 #Preview {
