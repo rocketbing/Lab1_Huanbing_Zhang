@@ -46,6 +46,13 @@ struct ContentView: View {
         .onAppear {
                     startNewRound()
         }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Game Over"),
+                message: Text("Correct: \(correctAnswers) \nWrong: \(wrongAnswers)"),
+                dismissButton: .default(Text("OK"), action: resetGame)
+            )
+        }
     }
     func checkAnswer(isPrimeSelected: Bool) {
         if isPrimeSelected == isPrime {
