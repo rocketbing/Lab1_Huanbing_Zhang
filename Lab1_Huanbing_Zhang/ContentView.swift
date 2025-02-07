@@ -16,6 +16,7 @@ struct ContentView: View {
     @State private var wrongAnswers: Int = 0
     @State private var attempts: Int = 0
     @State private var showAlert: Bool = false
+    @State private var timer: Timer?
     var body: some View {
         VStack {
             Image(systemName: "globe")
