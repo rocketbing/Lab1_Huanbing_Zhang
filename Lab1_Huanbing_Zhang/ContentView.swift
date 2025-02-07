@@ -19,12 +19,11 @@ struct ContentView: View {
     @State private var timer: Timer?
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("\(number)")
+                .font(.system(size: 60, weight: .bold, design: .default))
+                .padding()
         }
-        .padding()
+       
     }
 }
 
