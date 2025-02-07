@@ -35,6 +35,30 @@ struct ContentView: View {
 
         showResult = true
         attempts += 1
+
+        if attempts == 10 {
+            showAlert = true
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                startNewRound()
+            }
+        }
+    }
+    func startNewRound() {
+        number = Int.random(in: 1...100)
+        showResult = false
+
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
+            wrongAnswers += 1
+            attempts += 1
+
+            if attempts == 10 {
+                showAlert = true
+            } else {
+                startNewRound()
+            }
+        }
     }
 }
 
