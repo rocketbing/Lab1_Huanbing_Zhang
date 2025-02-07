@@ -40,6 +40,8 @@ struct ContentView: View {
                                 .foregroundColor(isCorrect ? .green : .red)
                                 .padding()
             }
+            Text("Correct: \(correctAnswers)  |  Wrong: \(wrongAnswers)")
+                .padding()
         }
     }
     func checkAnswer(isPrimeSelected: Bool) {
