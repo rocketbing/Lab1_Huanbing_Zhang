@@ -12,6 +12,8 @@ struct ContentView: View {
     @State private var isPrime: Bool = false
     @State private var showResult: Bool = false
     @State private var isCorrect: Bool = false
+    @State private var correctAnswers: Int = 0
+    @State private var wrongAnswers: Int = 0
     var body: some View {
         VStack {
             Image(systemName: "globe")
