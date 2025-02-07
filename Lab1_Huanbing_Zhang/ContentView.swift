@@ -46,6 +46,7 @@ struct ContentView: View {
     }
     func startNewRound() {
         number = Int.random(in: 1...100)
+        isPrime = checkIfPrime(number)
         showResult = false
 
         timer?.invalidate()
@@ -59,6 +60,15 @@ struct ContentView: View {
                 startNewRound()
             }
         }
+    }
+    func checkIfPrime(_ num: Int) -> Bool {
+           if num < 2 { return false }
+           for i in 2..<num {
+               if num % i == 0 {
+                   return false
+               }
+           }
+           return true
     }
 }
 
