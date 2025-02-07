@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Lab1_Huanbing_Zhang
-//
-//  Created by Steve Zhang on 2025-02-07.
-//
-
 import SwiftUI
 
 struct ContentView: View {
